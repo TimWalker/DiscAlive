@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DiscAlive</string>
+    <string name="action_settings">Settings</string>
+    <string name="AlternativeTitle">DiscAliveOhYes</string>
+    <string name="edit_message">Welcome to DiscAlive!</string>
+    <string name="button_send">I am a button</string>
+    <string name="welcome">DiscAlive!</string>
+</resources>
