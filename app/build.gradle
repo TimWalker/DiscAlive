@@ -81,7 +81,6 @@ dependencies {
     androidTestCompile ('com.android.support.test:rules:0.5') {
         exclude group: 'com.android.support', module: 'support-annotations'
     }
-
 }
 
 

@@ -7,7 +7,6 @@ import android.test.InstrumentationTestCase;
 import android.test.InstrumentationTestRunner;
 import android.util.Log;
 
-import cucumber.api.CucumberOptions;
 import cucumber.api.android.CucumberInstrumentationCore;
 
 public class CucumberInstrumentation extends InstrumentationTestRunner {
@@ -18,7 +17,7 @@ public class CucumberInstrumentation extends InstrumentationTestRunner {
     public void onCreate(final Bundle bundle) {
         try {
             super.onCreate(bundle);
-            Log.d("Bundle: ", bundle.getClass().toString());
+            Log.d("CucumberInstrumentation: ", "Keys: " + bundle.keySet().toString() + "Class: " + bundle.getClass().toString());
             instrumentationCore.create(bundle);
         } catch(Exception e) { Log.d("Cucumber:", "onStart Exception" + e.getMessage()); }
     }
