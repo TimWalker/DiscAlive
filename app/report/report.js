@@ -28,7 +28,7 @@ formatter.match({
   "location": "rfid_steps.there_are_no_RFIDs_in_Proximity()"
 });
 formatter.result({
-  "duration": 106588384,
+  "duration": 150190986,
   "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat com.theagiletester.discalive.step_definitions.rfid_steps.there_are_no_RFIDs_in_Proximity(rfid_steps.java:17)\n\tat ✽.Given there are no RFIDs in Proximity(DiscAlive.feature:3)\n",
   "status": "pending"
 });
@@ -66,7 +66,7 @@ formatter.match({
   "location": "rfid_steps.i_am_in_proximity_of_an_RFID_Tag()"
 });
 formatter.result({
-  "duration": 521511,
+  "duration": 1731572,
   "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat com.theagiletester.discalive.step_definitions.rfid_steps.i_am_in_proximity_of_an_RFID_Tag(rfid_steps.java:29)\n\tat ✽.Given I am in proximity of an RFID Tag(DiscAlive.feature:7)\n",
   "status": "pending"
 });
@@ -98,7 +98,7 @@ formatter.match({
   "location": "rfid_steps.i_can_read_an_RFID_Tag()"
 });
 formatter.result({
-  "duration": 249991,
+  "duration": 244808,
   "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat com.theagiletester.discalive.step_definitions.rfid_steps.i_can_read_an_RFID_Tag(rfid_steps.java:41)\n\tat ✽.Given I can read an RFID Tag(DiscAlive.feature:11)\n",
   "status": "pending"
 });
@@ -130,7 +130,7 @@ formatter.match({
   "location": "rfid_steps.i_my_Android_phone_is_in_proximity_of_an_NFC_RFID()"
 });
 formatter.result({
-  "duration": 263654,
+  "duration": 264238,
   "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat com.theagiletester.discalive.step_definitions.rfid_steps.i_my_Android_phone_is_in_proximity_of_an_NFC_RFID(rfid_steps.java:53)\n\tat ✽.Given I my Android phone is in proximity of an NFC RFID(DiscAlive.feature:15)\n",
   "status": "pending"
 });

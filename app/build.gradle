@@ -5,12 +5,13 @@ android {
     buildToolsVersion "24.0.1"
 
     defaultConfig {
-        applicationId "com.example.theagiletester.discalive"
+        applicationId "com.theagiletester.discalive"
         minSdkVersion 18
         targetSdkVersion 19
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
+        testInstrumentationRunner "com.theagiletester.discalive.app.helpers.CucumberInstrumentation"
     }
 
     buildTypes {
@@ -68,7 +69,6 @@ dependencies {
 
     // Hamcrest "matchers" support
     androidTestCompile 'org.hamcrest:hamcrest-library:1.3'
-
 
   //Exclusions - DEX exceptions
 

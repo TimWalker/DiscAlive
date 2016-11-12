@@ -1,7 +1,7 @@
 //package com.theagiletester.discalive.app.stepDefinitions;
 //
 //import android.support.test.espresso.Espresso;
-//import com.example.app.pages.LoginPage;
+//import com.app.pages.LoginPage;
 //
 //import cucumber.api.java.en.Given;
 //import cucumber.api.java.en.When;
