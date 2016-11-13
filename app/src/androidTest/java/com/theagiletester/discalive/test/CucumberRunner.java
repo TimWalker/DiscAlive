@@ -1,13 +1,14 @@
-package com.theagiletester.discalive.app.stepDefinitions.runner;
+package com.theagiletester.discalive.test;
 
 import junit.framework.TestCase;
-import cucumber.api.CucumberOptions;
 
 /**
  * Created by timwalker on 11/11/16.
  */
+
+import cucumber.api.CucumberOptions;
 @CucumberOptions(
-        glue = "com.theagiletester.discalive.stepDefinitions",
+        glue = "com.theagiletester.discalive.app.stepDefinitions",
         plugin = {
                 "pretty",
                 "html:" + CucumberRunner.REPORT_PATH + "cucumber-html-report",
