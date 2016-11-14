@@ -2,7 +2,7 @@ Feature: UI
   As a user of DiscAlive! I want a Landing Page That is awesome!
 
   Background: Establish
-    Given I am on the DiscAlive! Main Activity Page
+    Given I am on the DiscAlive! Main Activity
 
   Scenario: There is a cool Image
     Then there is a cool image

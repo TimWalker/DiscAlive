@@ -15,8 +15,8 @@ import cucumber.api.CucumberOptions;
 //                "pretty:" + CucumberRunner.REPORT_PATH + "cucumber-report.json",
 //                "junit:" + CucumberRunner.REPORT_PATH + "cucumber.xml"
 //        },
-        features = "features"
-        //tags = "~@wip"
+        features = "features",
+        tags = "~@wip"
         )
 
 public class CucumberRunner extends TestCase
