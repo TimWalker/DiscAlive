@@ -9,14 +9,15 @@ import junit.framework.TestCase;
 import cucumber.api.CucumberOptions;
 @CucumberOptions(
         glue = "com.theagiletester.discalive.app.stepDefinitions",
-        plugin = {
-                "pretty",
-                "html:" + CucumberRunner.REPORT_PATH + "cucumber-html-report",
-                "pretty:" + CucumberRunner.REPORT_PATH + "cucumber-report.json",
-                "junit:" + CucumberRunner.REPORT_PATH + "cucumber.xml"
-        },
-        features = "assets.features",
-        tags = "@shortSanity")
+//        plugin = {
+//                "pretty",
+//                "html:" + CucumberRunner.REPORT_PATH + "cucumber-html-report",
+//                "pretty:" + CucumberRunner.REPORT_PATH + "cucumber-report.json",
+//                "junit:" + CucumberRunner.REPORT_PATH + "cucumber.xml"
+//        },
+        features = "features"
+        //tags = "~@wip"
+        )
 
 public class CucumberRunner extends TestCase
 {
