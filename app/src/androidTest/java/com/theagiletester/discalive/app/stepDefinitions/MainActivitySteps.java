@@ -7,6 +7,8 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.But;
 import cucumber.api.PendingException;
 
+import android.content.res.Resources;
+import android.text.Layout;
 import android.util.Log;
 import android.app.Instrumentation;
 
@@ -15,16 +17,24 @@ import android.test.ActivityInstrumentationTestCase2;
 import com.theagiletester.discalive.MainActivity;
 import com.theagiletester.discalive.R;
 
+import android.view.Display;
+import android.view.LayoutInflater;
 import android.view.ViewGroup;
+import android.view.View;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.ImageView;
+import android.graphics.drawable.*;
+
+import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.*;
 
 /**
  * Created by timwalker on 11/11/16.
  */
 
 public class MainActivitySteps extends ActivityInstrumentationTestCase2<MainActivity> {
-
     MainActivity mainActivity;
     ImageView imageView;
 
@@ -54,9 +64,12 @@ public class MainActivitySteps extends ActivityInstrumentationTestCase2<MainActi
 
     @Then("^there is a cool image$")
     public void there_is_a_cool_image() throws Throwable {
-        ViewGroup vg = (ViewGroup) mainActivity.findViewById(android.R.id.content);
-        Log.d("Cucumber Step", "MainActivityBackground: " + vg.toString());
-        //Log.d("Cucumber Step", "MainActivityBackground: " + vg.getBackground().toString());
+        //Todo: Replace with better test for night
+        LinearLayout l = (LinearLayout)mainActivity.findViewById(R.id.linearlayout);
+        Drawable ld = l.getBackground();
+        ld.isVisible();
+        assertThat(ld.isVisible(), is(true));
+
     }
 
     @Then("^there is a cool text that says \"([^\"]*)\"$")

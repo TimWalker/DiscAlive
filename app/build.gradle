@@ -34,6 +34,14 @@ android {
         exclude 'LICENSE.txt'
     }
 
+
+
+    sourceSets {
+        androidTest {
+            assets.srcDirs = ['src/androidTest/java/com/theagiletester/discalive/assets/']
+        }
+    }
+
 }
 
 
@@ -55,7 +63,6 @@ dependencies {
     compile 'info.cukes:cucumber-jvm-deps:1.0.3'
     compile 'com.android.support:support-v4:23.0.0'
 
-
     androidTestCompile 'com.android.support:support-annotations:24.1.1'
     androidTestCompile 'com.android.support:multidex-instrumentation:1.0.1'
     androidTestCompile 'com.android.support.test:runner:0.5'
@@ -68,9 +75,11 @@ dependencies {
     androidTestCompile 'info.cukes:cucumber-picocontainer:1.2.4'
 
     // Hamcrest "matchers" support
-    androidTestCompile 'org.hamcrest:hamcrest-library:1.3'
+    androidTestCompile 'org.hamcrest:hamcrest-core:1.3'
+    androidTestCompile 'org.hamcrest:hamcrest-integration:1.3'
+    androidTestCompile 'org.hamcrest:hamcrest-library:1.1'
 
-  //Exclusions - DEX exceptions
+    //Exclusions - DEX exceptions
 
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2') {
         exclude group: 'com.android.support', module: 'support-annotations'
