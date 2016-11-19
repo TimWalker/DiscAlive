@@ -9,17 +9,12 @@ import junit.framework.TestCase;
 import cucumber.api.CucumberOptions;
 @CucumberOptions(
         glue = "com.theagiletester.discalive.app.stepDefinitions",
-//        plugin = {
-//                "pretty",
-//                "html:" + CucumberRunner.REPORT_PATH + "cucumber-html-report",
-//                "pretty:" + CucumberRunner.REPORT_PATH + "cucumber-report.json",
-//                "junit:" + CucumberRunner.REPORT_PATH + "cucumber.xml"
-//        },
+        plugin = { "pretty" },
         features = "features",
         tags = "~@wip"
         )
 
 public class CucumberRunner extends TestCase
 {
-        public static final String REPORT_PATH = "data/data/cucumber-reports/";
+        public static final String REPORT_PATH = "cucumber-reports/";
 }

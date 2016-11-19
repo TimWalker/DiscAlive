@@ -59,7 +59,7 @@ public class MainActivitySteps extends ActivityInstrumentationTestCase2<MainActi
         Log.d("Cucumber Step", "MainActivityPage");
         super.setUp();
         mainActivity = getActivity();
-        assertTrue("mainACtivity is null",mainActivity != null);
+        assertThat(mainActivity, is(notNullValue()));
     }
 
     @Then("^there is a cool image$")
@@ -69,7 +69,6 @@ public class MainActivitySteps extends ActivityInstrumentationTestCase2<MainActi
         Drawable ld = l.getBackground();
         ld.isVisible();
         assertThat(ld.isVisible(), is(true));
-
     }
 
     @Then("^there is a cool text that says \"([^\"]*)\"$")
