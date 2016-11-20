@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearlayout"
     android:layout_width="match_parent"
@@ -9,12 +10,13 @@
     android:typeface="serif"
     android:textSize="40sp"
     android:textStyle="bold"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:weightSum="1">
 
     <TextView
         style="@style/AppTheme"
         android:layout_width="300dp"
+        android:id="@+id/comeAliveText"
         android:text="@string/welcome"
         android:gravity="center"
         android:typeface="serif"
@@ -24,12 +26,19 @@
         android:layout_height="67dp"
         android:layout_marginTop="350dp"
         android:layout_marginLeft="50dp"
-        /><![CDATA[
+        />
 
-    />
-    ]]><!--<EditText android:id="@+id/edit_message"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:hint="@string/edit_message" />-->
+    <ImageButton
+        android:gravity="center"
+        android:id="@+id/comeAliveButton"
+        android:background="@drawable/come_alive_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0.64"
+        />
+
+    <![CDATA[]]>
+
 </LinearLayout>
 
