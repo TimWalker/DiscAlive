@@ -1,7 +1,5 @@
 package com.theagiletester.discalive.step_definitions;
 
-import com.theagiletester.discalive.RFIDReaderInterface;
-
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;

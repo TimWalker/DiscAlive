@@ -1,4 +1,6 @@
-package com.theagiletester.discalive;
+package com.theagiletester.discalive.test;
+
+import com.theagiletester.discalive.DiscAliveReaderInterface;
 
 /**
  * Created by timwalker on 11/19/16.
