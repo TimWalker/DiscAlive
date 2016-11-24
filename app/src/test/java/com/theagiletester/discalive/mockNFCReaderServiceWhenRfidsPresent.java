@@ -15,4 +15,7 @@ public class mockNFCReaderServiceWhenRfidsPresent implements DiscAliveReaderInte
     public String readSmartDisc() {
         return "SmartDisc Payload";
     }
+
+    @Override
+    public boolean initialize() { return false; }
 }

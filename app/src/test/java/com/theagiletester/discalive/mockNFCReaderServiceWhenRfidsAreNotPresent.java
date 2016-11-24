@@ -15,4 +15,7 @@ public class mockNFCReaderServiceWhenRfidsAreNotPresent implements DiscAliveRead
     public String readSmartDisc() {
         return null;
     }
+
+    @Override
+    public boolean initialize() { return false; }
 }

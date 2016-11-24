@@ -12,4 +12,6 @@ public class DiscAliveReader implements DiscAliveReaderInterface{
     public String readSmartDisc() {
         return "";
     };
+
+    public boolean initialize() { return true; }
 }

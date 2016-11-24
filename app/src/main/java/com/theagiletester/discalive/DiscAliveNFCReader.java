@@ -2,10 +2,16 @@ package com.theagiletester.discalive;
 
 import android.content.Context;
 import android.nfc.NfcAdapter;
-
+import android.nfc.NfcAdapter.*;
+import android.nfc.NfcAdapter.ReaderCallback;
+import android.app.Activity;
+import android.nfc.Tag;
 //Todo: Get rid of dependencies for this class for diagnostic only
 import android.util.Log;
 import android.widget.Toast;
+
+import android.content.Intent;
+import android.app.PendingIntent;
 
 /**
  * Created by timwalker on 11/20/16.
@@ -14,6 +20,8 @@ import android.widget.Toast;
 public class DiscAliveNFCReader extends DiscAliveReader implements DiscAliveReaderInterface {
 
     NfcAdapter mNfcAdapter;
+    Context mContext;
+    Activity mActivity;
 
     public DiscAliveNFCReader(Context context) {
         Log.d("Cucumber", "Getting an NFCAdapter with context: " + context.toString());
@@ -42,6 +50,37 @@ public class DiscAliveNFCReader extends DiscAliveReader implements DiscAliveRead
             Log.d("Cucumber", "Exception getting an NfcAdapter: " + e.getMessage());
         }
     };
+
+    public boolean initialize()
+    {
+
+        if (mNfcAdapter == null)
+            return false;
+
+//        if (!enable) {
+//            nfcAdapter.disableReaderMode(activity);
+//            return;
+//        }
+
+//        Bundle opts = new Bundle();
+//        opts.putInt(NfcAdapter.EXTRA_READER_PRESENCE_CHECK_DELAY, 5000);
+
+        int flags = NfcAdapter.FLAG_READER_SKIP_NDEF_CHECK;
+        flags |= NfcAdapter.FLAG_READER_NFC_A;
+
+//        mNfcAdapter.enableReaderMode(mActivity, new ReaderCallback() {
+//            @Override
+//            public void onTagDiscovered(Tag tag) {
+//                Log.d("Cucumber NFC Reader", "Tag Discovered: " + tag.toString());
+//            }
+//        }, flags, null);
+
+        return true;
+    }
+
+    public void setActivity(Activity activity) {
+        mActivity = activity;
+    }
 
     public boolean detectSmartDisc(int seconds) {
         return false;
