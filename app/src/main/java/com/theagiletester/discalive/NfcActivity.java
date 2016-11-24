@@ -37,8 +37,8 @@ public class NfcActivity extends Activity {
         Log.d("Cucumber NFC", "nfcActivity onCreate with " + savedState);
 
         //setContentView(R.layout.foreground_dispatch);
-        mText = (TextView) findViewById(R.id.text);
-        mText.setText("Scan a tag");
+        //mText = (TextView) findViewById(R.id.text);
+        //mText.setText("Scan a tag");
         mAdapter = NfcAdapter.getDefaultAdapter(this);
         // Create a generic PendingIntent that will be deliver to this activity. The NFC stack
         // will fill in the intent with the details of the discovered tag before delivering to
