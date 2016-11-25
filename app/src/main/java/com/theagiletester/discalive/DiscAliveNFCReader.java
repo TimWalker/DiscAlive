@@ -24,38 +24,38 @@ public class DiscAliveNFCReader extends DiscAliveReader implements DiscAliveRead
     Activity mActivity;
 
     public DiscAliveNFCReader(Context context) {
-        Log.d("Cucumber", "Getting an NFCAdapter with context: " + context.toString());
-        try {
-            mNfcAdapter = NfcAdapter.getDefaultAdapter(context);
-            Log.d("Cucumber", "Obtained an NFC Adapter: " + mNfcAdapter.toString());
-            if ( (mNfcAdapter != null) && (mNfcAdapter.isEnabled()) ) {
-                Log.d("Cucumber", "NFC Adapter is enabled");
-            }
-        }
-        catch (Exception e) {
-            Log.d("Cucumber", "Exception getting an NfcAdapter: " + e.getMessage());
-        }
+//        Log.d("Cucumber", "Getting an NFCAdapter with context: " + context.toString());
+//        try {
+//            mNfcAdapter = NfcAdapter.getDefaultAdapter(context);
+//            Log.d("Cucumber", "Obtained an NFC Adapter: " + mNfcAdapter.toString());
+//            if ( (mNfcAdapter != null) && (mNfcAdapter.isEnabled()) ) {
+//                Log.d("Cucumber", "NFC Adapter is enabled");
+//            }
+//        }
+//        catch (Exception e) {
+//            Log.d("Cucumber", "Exception getting an NfcAdapter: " + e.getMessage());
+//        }
     }
 
     public DiscAliveNFCReader() {
-        Log.d("Cucumber", "Getting an NFCAdapter");
-        try {
-            mNfcAdapter = NfcAdapter.getDefaultAdapter(MainActivity.myContext);
-            Log.d("Cucumber", "Obtained an NFC Adapter: " + mNfcAdapter.toString());
-            if ( (mNfcAdapter != null) && (mNfcAdapter.isEnabled()) ) {
-                Log.d("Cucumber", "NFC Adapter is enabled");
-            }
-        }
-        catch (Exception e) {
-            Log.d("Cucumber", "Exception getting an NfcAdapter: " + e.getMessage());
-        }
+//        Log.d("Cucumber", "Getting an NFCAdapter");
+//        try {
+//            mNfcAdapter = NfcAdapter.getDefaultAdapter(MainActivity.myContext);
+//            Log.d("Cucumber", "Obtained an NFC Adapter: " + mNfcAdapter.toString());
+//            if ( (mNfcAdapter != null) && (mNfcAdapter.isEnabled()) ) {
+//                Log.d("Cucumber", "NFC Adapter is enabled");
+//            }
+//        }
+//        catch (Exception e) {
+//            Log.d("Cucumber", "Exception getting an NfcAdapter: " + e.getMessage());
+//        }
     };
 
     public boolean initialize()
     {
 
-        if (mNfcAdapter == null)
-            return false;
+//        if (mNfcAdapter == null)
+//            return false;
 
 //        if (!enable) {
 //            nfcAdapter.disableReaderMode(activity);

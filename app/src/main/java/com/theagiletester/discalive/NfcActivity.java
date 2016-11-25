@@ -17,6 +17,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
+import static com.theagiletester.discalive.R.layout.activity_main;
+import static com.theagiletester.discalive.R.layout.activity_nfc;
+
 /**
  * An example of how to use the NFC foreground dispatch APIs. This will intercept any MIME data
  * based NDEF dispatch as well as all dispatched for NfcF tags.
@@ -33,6 +36,8 @@ public class NfcActivity extends Activity {
     @Override
     public void onCreate(Bundle savedState) {
         super.onCreate(savedState);
+
+        setContentView(activity_nfc);
 
         Log.d("Cucumber NFC", "nfcActivity onCreate with " + savedState);
 
