@@ -15,7 +15,7 @@
 
     <TextView
         style="@style/AppTheme"
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:id="@+id/comeAliveText"
         android:text="@string/welcome"
         android:gravity="center"
@@ -24,7 +24,22 @@
         android:textStyle="bold"
         android:textColor="#FFFFFF"
         android:layout_height="67dp"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="50dp"
+        />
+
+    <TextView
+        style="@style/AppTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/approachText"
+        android:text="@string/approach_tag"
+        android:gravity="center"
+        android:typeface="serif"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="150dp"
         android:layout_marginLeft="50dp"
         />
 
@@ -32,11 +47,12 @@
         android:gravity="center"
         android:id="@+id/comeAliveButton"
         android:background="@drawable/come_alive_button"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_width="wrap_content"
         android:layout_gravity="center"
         android:layout_weight="0.64"
         />
+
 
     <![CDATA[]]>
 
