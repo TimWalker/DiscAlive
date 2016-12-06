@@ -1,3 +1,4 @@
+@wip
 Feature: RFID Alive
   As a user of DiscAlive! I'd like to interact with RFID enabled SmartDiscs
   So that they can tell me about themselves. I can use the information to understand
@@ -11,9 +12,10 @@ Feature: RFID Alive
     a disc and then tell me all about it
 
     When there is an RFID enabled SmartDisc detected
-    And I click on the DiscAlive! Button
     Then DiscAlive! will tell me all about the disc
 
+    #Note - this is a diagnostic window to play with the running connected app after the tests
+    #are done running.
     Then I just admire the state for 120 seconds
 
   @wip

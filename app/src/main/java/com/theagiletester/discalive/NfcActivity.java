@@ -21,7 +21,7 @@ import static com.theagiletester.discalive.R.layout.activity_main;
 import static com.theagiletester.discalive.R.layout.activity_nfc;
 
 import android.nfc.Tag;
-
+import android.speech.tts.TextToSpeech;
 
 import android.app.Activity;
 import android.app.PendingIntent;
@@ -37,8 +37,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
+
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
+import java.util.Locale;
 
 /**
  * An example of how to use the NFC foreground dispatch APIs. This will intercept any MIME data
@@ -83,11 +87,11 @@ public class NfcActivity extends Activity {
         } catch (MalformedMimeTypeException e) {
             throw new RuntimeException("fail", e);
         }
-        mFilters = new IntentFilter[] {
+        mFilters = new IntentFilter[]{
                 ndef,
         };
         // Setup a tech list for all NfcF tags
-        mTechLists = new String[][] { new String[] { NfcF.class.getName() } };
+        mTechLists = new String[][]{new String[]{NfcF.class.getName()}};
 
     }
 
@@ -99,7 +103,6 @@ public class NfcActivity extends Activity {
             mAdapter.enableForegroundDispatch(this, mPendingIntent, mFilters,
                     mTechLists);
         }
-
     }
 
     @Override
@@ -112,7 +115,7 @@ public class NfcActivity extends Activity {
     public void onPause() {
         super.onPause();
         Log.d("Cucumber NFC", "onPause");
-        //if (mAdapter != null) mAdapter.disableForegroundDispatch(this);
+        if (mAdapter != null) mAdapter.disableForegroundDispatch(this);
     }
 
     private void handleIntent(Intent intent) {
@@ -143,10 +146,11 @@ public class NfcActivity extends Activity {
                 if (searchedTech.equals(tech)) {
                     new NdefReaderTask().execute(tag);
                     break;
-               }
-           }
+                }
+            }
         }
     }
+
     private class NdefReaderTask extends AsyncTask<Tag, Void, String> {
 
         @Override
@@ -207,7 +211,7 @@ public class NfcActivity extends Activity {
         protected void onPostExecute(String result) {
             if (result != null) {
                 mTextView.setText(result);
-                Log.d("Cucumber NFC",result);
+                Log.d("Cucumber NFC", result);
             }
         }
     }

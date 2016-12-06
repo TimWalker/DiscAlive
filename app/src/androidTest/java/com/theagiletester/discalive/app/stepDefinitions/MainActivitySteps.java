@@ -19,6 +19,7 @@ import com.theagiletester.discalive.DiscAliveEngine;
 import com.theagiletester.discalive.DiscAliveReader;
 import com.theagiletester.discalive.DiscAliveReaderInterface;
 import com.theagiletester.discalive.MainActivity;
+import com.theagiletester.discalive.NfcActivity;
 import com.theagiletester.discalive.R;
 import com.theagiletester.discalive.test.mockNFCReaderServiceWhenRfidsPresent;
 
@@ -61,7 +62,6 @@ public class MainActivitySteps extends ActivityInstrumentationTestCase2<MainActi
     public void i_click_on_the_DiscAlive_Button() throws Throwable {
         ImageButton imageButton = (ImageButton) mainActivity.findViewById(R.id.comeAliveButton);
         imageButton.callOnClick();
-        assertThat(discAliveEngine.getPayload(), is(notNullValue()));
     }
 
     @Then("^DiscAlive! will tell me all about the disc$")

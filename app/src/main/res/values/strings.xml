@@ -5,5 +5,5 @@
     <string name="edit_message">Welcome to DiscAlive!</string>
     <string name="button_send">I am a button</string>
     <string name="welcome">DiscAlive!</string>
-    <string name="approach_tag">Approach a SmartDisc!</string>
+    <string name="approach_tag">Click to Enter DiscAlive then approach a SmartDisc.</string>
 </resources>

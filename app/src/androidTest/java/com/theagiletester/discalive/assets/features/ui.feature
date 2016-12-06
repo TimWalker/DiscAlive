@@ -1,4 +1,3 @@
-@wip
 Feature: UI
   As a user of DiscAlive! I want a Landing Page That is awesome!
 
@@ -6,8 +5,8 @@ Feature: UI
   screen that is stunning in appearance and incredibly simple. Like Google. Just an obvious
   and comfortable image and a button to bring it to life.
 
+  @wip
   Scenario: There is a cool and simple initial user experience
-
   As a user of DiscAlive on the Main Activity Page
 
     o I want a cool and very simple user experience
@@ -24,3 +23,12 @@ Feature: UI
 
     Then I just admire the state for 20 seconds
 
+  Scenario: Clicking on the main screen disc image creates an nfc activity
+  As a user of DiscAlive on the Main Activity Page
+  I want to be able to do something of value immediately.
+  So I will get right to DiscAlive! SmartDisc engine.
+
+    Given I am on the DiscAlive! Main Activity
+    When I click on the DiscAlive! Button
+    Then I am on the NFCActivity
+    Then I just admire the state for 100 seconds
